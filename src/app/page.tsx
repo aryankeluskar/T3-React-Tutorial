@@ -1,3 +1,8 @@
+const urlsMock = [
+  "https://utfs.io/f/37289b0d-928c-4d16-b683-aeb383a50f72-kc6qdh.jpg",
+]
+
+
 
 export default function HomePage() {
   return (
