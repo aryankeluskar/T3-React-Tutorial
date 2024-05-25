@@ -22,3 +22,11 @@ var inputUser = function (name, email) {
 function throwError(message) {
     throw new Error(message);
 }
+// OBJECTS  
+var newUser = { newName: "Aryan", isAuth: true };
+function createUser(_a) {
+    var newName = _a.newName, isAuth = _a.isAuth;
+    console.log(newName + " is authenticated: " + isAuth);
+    return true;
+}
+createUser(newUser);

@@ -28,3 +28,14 @@ let inputUser = (name: string, email: string): string => {
 function throwError(message: string): never{
     throw new Error(message);
 }
+
+// OBJECTS  
+
+let newUser = { newName: "Aryan", isAuth: true };
+
+function createUser({newName, isAuth}: {newName: string, isAuth: boolean}): boolean {
+    console.log(newName + " is authenticated: " + isAuth);
+    return true;
+}
+
+createUser(newUser);
