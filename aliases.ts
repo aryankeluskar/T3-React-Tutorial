@@ -1,4 +1,4 @@
-// ALIASES
+// ALIASES / CUSTOM TYPES
 
 type User = {
     name: string;
@@ -34,3 +34,12 @@ console.log(pi);
 let seats : "upper" | "berth" | "lower" = "upper";
 seats = "berth";
 console.log(seats);
+
+// TUPLES 
+let user: [string, number, boolean]
+user = ["Aryan", 18, true];
+user = ["new", 20, false];
+console.log(user);
+
+let RGB: [number, number, number] = [255, 0, 0];
+console.log(RGB);
