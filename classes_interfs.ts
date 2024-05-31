@@ -1,4 +1,8 @@
-// INTERFACE
+// CLASSES
+
+
+
+// INTERFACES
 
 interface User {
     name: string;

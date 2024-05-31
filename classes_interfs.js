@@ -1,4 +1,4 @@
-// INTERFACE
+// CLASSES
 var aryna = {
     name: "Aryan",
     age: 18,
