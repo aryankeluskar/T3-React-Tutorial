@@ -1,4 +1,44 @@
 // CLASSES
+class NetflixUser {
+    private _courseCount = 1;
+
+    public name: string; // public by default in TS
+    email: string;
+    age: number;
+    private readonly _id: string;
+    constructor(
+        name: string,
+        age: number,
+        email: string) {
+        console.log("New user added");
+        this.email = email;
+        this.age = age;
+        this.name = name;
+        this._id = Math.random().toString(36).substring(2);
+    }
+
+    get getEmail(): string{
+        return `netflix${this.email}`;
+    }
+
+    get getCourseCount(): number{
+        return this._courseCount;
+    }
+
+    set setCourseCount(count: number){ // can not have a return type at all
+        if(count < 1){
+            count = 1;
+            throw new Error("Course count can not be less than 1");
+        }
+        this._courseCount = count;
+    }
+}
+
+
+
+let arian = new NetflixUser("Arian", 18, "a@k.dev");
+let newAryan = new NetflixUser("Aryan", 18, "a@k.dev");
+// console.log(aryan._id); // error because it is private
 
 
 
@@ -21,7 +61,7 @@ interface User {
 }
 
 
-let aryna : User = {
+let aryna: User = {
     name: "Aryan",
     age: 18,
     email: "a@k.dev",
@@ -41,7 +81,7 @@ console.log(aryna.start());
 
 interface Admin extends User {
     admin: boolean;
-    adminID : number;
-    role : "admin" | "superadmin";
+    adminID: number;
+    role: "admin" | "superadmin";
 }
 
